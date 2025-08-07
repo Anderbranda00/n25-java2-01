@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class Exemplo05 {
+
+	public static void main(String[] args) {
+       Scanner sc = new Scanner (Exemplo05.class.getResourceAsStream("cadastro.csv"));
+       //Trocando o token do canner
+       sc.useDelimiter(",");
+       for(int i=0;1<4;i++) {
+          System.out.print(sc.next().replace("\"","") + "\t");
+          
+       }
+       System.out.println(); //pulando a linha
+       sc.close();
+	}
+
+}
