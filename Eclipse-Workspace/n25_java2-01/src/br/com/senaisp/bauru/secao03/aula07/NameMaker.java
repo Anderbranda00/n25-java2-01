@@ -1,0 +1,25 @@
+package br.com.senaisp.bauru.secao03.aula07;
+
+import java.util.Scanner;
+
+public class NameMaker {
+
+	public static void main(String[] args) {
+		//solicitar o nome, nome do meio e sobrenome separadamente 
+		//Mostrar o nome completo ao termino
+		//pode susar o scanner ou JOptionPane para solicitar ao usuario
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("nome");
+		String primeiroNome = sc.next();
+		String nomeDoMeio = sc.next();
+		String ultimoNome = sc.next();
+		String nomeCompleto = primeiroNome + " " + nomeDoMeio + " " + ultimoNome;
+		System.out.println(primeiroNome + "\n" + nomeDoMeio + "\n" + ultimoNome + "\n" + nomeCompleto);
+		
+		
+		
+	}
+
+}

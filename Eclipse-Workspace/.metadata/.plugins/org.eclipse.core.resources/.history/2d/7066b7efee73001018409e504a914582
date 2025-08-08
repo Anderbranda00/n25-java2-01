@@ -1,6 +1,6 @@
-package br.com.senaisp.bauru.secao02.aula04;
+package br.com.senaisp.bauru.secao03.aula07;
 
-public class Variables03 {
+public class NameMaker {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
