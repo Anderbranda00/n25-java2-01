@@ -1,0 +1,32 @@
+package br.com.senaisp.bauru.secao03.aula07;
+
+import java.util.Scanner;
+
+public class OrdemTexto {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(OrdemTexto.class.getResourceAsStream("palavras.txt"));
+		//Definindo variaveis de trabalho
+		String maiorTexto, menorTexto;
+		//Setando o maior e o menor com o primeiro texto 
+		maiorTexto = sc.nextLine();
+		menorTexto = maiorTexto; //Igualando os endereços para o mesmo conteudo
+		//Vamos usar o while (Ja viu no Java)
+		while (sc.hasNextLine());{
+			String apoio = sc.nextLine();
+			if (apoio.compareTo(menorTexto)<0) {
+				menorTexto = ""+apoio; 
+			}
+			//Comparando os textos - maior 
+			if (apoio.compareTo(maiorTexto)<0) {
+				maiorTexto = ""+ apoio;
+				
+			}
+		}
+		System.out.println("Maior texto foi" + maiorTexto);
+		System.out.println("Menor texto foi" + menorTexto);
+		//Fechando o arquivo 
+		sc.close();
+	}
+
+}
