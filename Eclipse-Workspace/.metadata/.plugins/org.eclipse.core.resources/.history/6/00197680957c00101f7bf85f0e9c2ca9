@@ -1,0 +1,8 @@
+
+public class BlackPlayer {
+	private String nome;
+	private ArrayList<Carta> artas;
+	private boolean perdedor;
+	private boolean ganhador;
+
+}
