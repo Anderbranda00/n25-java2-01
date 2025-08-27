@@ -8,13 +8,13 @@ public abstract class Pessoa {
 	private String endereco;
 	private String dataNascimento;
 	private char tipoPessoa;
-	//constructor
+	//Constructor
 	public Pessoa() {
 		carregarId();
-		
 	}
 	//Sobrecarga de Constructor
-	public Pessoa(String nom,String doc,String ende,String dtNas) throws Exception {
+	public Pessoa(String nom, String doc, String ende, String dtNas) 
+			throws DocumentoException, EnderecoException {
 		carregarId();
 		setNome(nom);
 		setDocumento(doc);
@@ -23,41 +23,12 @@ public abstract class Pessoa {
 	}
 	private void carregarId() {
 		id = ++contador;
-		
 	}
-	
 	protected char getTipoPessoa() {
 		return tipoPessoa;
 	}
 	protected void setTipoPessoa(char tipoPessoa) {
 		this.tipoPessoa = tipoPessoa;
-	}
-	public int getId() {
-		return id;
-	}
-	public String getDocumento() {
-		return documento;
-	}
-	public void setDocumento(String documento) throws Exception {
-		if (isDocumentoValido(documento)) {
-			this.documento = documento;
-		} else {
-			throw new Exception("Documento Invalido de acordo com o"
-			    	  + "tipo de pessoa!");
-		}
-	}
-	protected abstract boolean isDocumentoValido(String documento2);
-	public String getEndereco() {
-		return endereco;
-	}
-	public void setEndereco(String endereco) {
-		this.endereco = endereco;
-	}
-	public String getDataNascimento() {
-		return dataNascimento;
-	}
-	public void setDataNascimento(String dataNascimento) {
-		this.dataNascimento = dataNascimento;
 	}
 	public String getNome() {
 		return nome;
@@ -65,17 +36,48 @@ public abstract class Pessoa {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	//Metodos
+	public String getDocumento() {
+		return documento;
+	}
+	public void setDocumento(String documento) throws DocumentoException {
+		if (isDocumentoValido(documento)) {
+			this.documento = documento;
+		} else {
+			throw new DocumentoException("Documento Inválido de acordo com o "
+					+ "tipo de pessoa!");
+		}
+	}
+	
+	protected abstract boolean isDocumentoValido(String documento2);
+	
+	public String getEndereco() {
+		return endereco;
+	}
+	public void setEndereco(String endereco) throws EnderecoException {
+		if (!endereco.isEmpty()) {
+			this.endereco = endereco;
+		} else {
+			throw new EnderecoException("Endereço deve ser preenchido!");
+		}
+	}
+	public String getDataNascimento() {
+		return dataNascimento;
+	}
+	public void setDataNascimento(String dataNascimento) {
+		this.dataNascimento = dataNascimento;
+	}
+	public int getId() {
+		return id;
+	}
+	//Métodos
 	@Override
 	public String toString() {
-		
-		return "=".repeat(20) + "\n"+
-				"id : " + getId() + "\n"+
-				 "Tipo: " + getTipoPessoa() + "\n"+
-                "Nome: " + getNome() + "\n"+
-				"Endereco: " + getEndereco() + "\n"+
-                "Documento: " + getDocumento() + "\n"+
-				"Data Nascimento: " + getDataNascimento() + "\n";
-		}
-
+		return "=".repeat(20) + "\n" +
+			   "Id: " + getId() + "\n" +
+			   "Tipo: " + getTipoPessoa()+"\n"+
+			   "Nome: " + getNome() + "\n" + 
+			   "Endereço: " + getEndereco() + "\n" +
+			   "Documento: " + getDocumento() + "\n" +
+			   "Data Nascimento: " + getDataNascimento() + "\n";
+	}
 }
