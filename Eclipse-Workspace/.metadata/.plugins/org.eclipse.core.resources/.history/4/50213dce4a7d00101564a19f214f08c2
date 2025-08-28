@@ -1,8 +1,0 @@
-import java.util.ArrayList;
-
-public class BlackJackGame {
-	private Baralho bar;
-	private ArrayList<BlackJackPlayer> players;
-	private boolean fimJogo; 
-
-}
