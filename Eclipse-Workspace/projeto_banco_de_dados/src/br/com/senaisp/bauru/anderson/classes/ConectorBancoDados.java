@@ -8,7 +8,7 @@ import java.sql.Statement;
 public class ConectorBancoDados {
 	private static ConectorBancoDados instancia = null;
 	private String connStr;
-	//Objeto de conexao SQL
+	//Objeto de conexão SQL
 	private Connection conn;
 	private ConectorBancoDados() throws SQLException {
 		connStr = "jdbc:sqlite:c:\\javalibs\\producao.db";
@@ -16,24 +16,21 @@ public class ConectorBancoDados {
 		criarEstrutura();
 	}
 	private void criarEstrutura() {
-		// TODO Auto-generated method stub
 		String tabela = """
 				CREATE TABLE IF NOT EXISTS produto (
-                  id        INTEGER         PRIMARY KEY AUTOINCREMENT
-                              NOT NULL,
-                   descricao TEXT (100)      NOT NULL,
-                   saldo     NUMERIC (15, 2) NOT NULL,
-                   preco     NUMERIC (15, 2) NOT NULL
-			       );
-			
-				   """;
+				    id        INTEGER         PRIMARY KEY AUTOINCREMENT
+				                              NOT NULL,
+				    descricao TEXT (100)      NOT NULL,
+				    saldo     NUMERIC (15, 2) NOT NULL,
+				    preco     NUMERIC (15, 2) NOT NULL
+				);
+				""";
 		try {
 			Statement stmt = conn.createStatement();
 			stmt.execute(tabela);
-		}catch(Exception e) {
+		} catch(Exception e) {
 			e.printStackTrace();
 		}
-		
 	}
 	//Isso é chamado pattern Singleton
 	public static ConectorBancoDados getInstancia() throws SQLException {
@@ -45,7 +42,7 @@ public class ConectorBancoDados {
 	public String getConnStr() {
 		return connStr;
 	}
-	public Connection getConnection () {
+	public Connection getConnection() {
 		return conn;
 	}
 }
