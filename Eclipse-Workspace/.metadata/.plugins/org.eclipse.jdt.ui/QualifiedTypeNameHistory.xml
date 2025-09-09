@@ -23,9 +23,7 @@
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="javax.management.InvalidApplicationException"/>
-    <fullyQualifiedTypeName name="javafx.application.Application"/>
     <fullyQualifiedTypeName name="javafx.event.EventHandler"/>
-    <fullyQualifiedTypeName name="javafx.scene.control.Button"/>
     <fullyQualifiedTypeName name="javafx.scene.layout.StackPane"/>
     <fullyQualifiedTypeName name="javafx.scene.layout.TilePane"/>
     <fullyQualifiedTypeName name="javafx.scene.layout.VBox"/>
@@ -34,7 +32,6 @@
     <fullyQualifiedTypeName name="javafx.scene.text.Text"/>
     <fullyQualifiedTypeName name="javafx.scene.image.ImageView"/>
     <fullyQualifiedTypeName name="javafx.scene.image.Image"/>
-    <fullyQualifiedTypeName name="java.awt.Button"/>
     <fullyQualifiedTypeName name="javafx.scene.text.Font"/>
     <fullyQualifiedTypeName name="javafx.scene.text.FontWeight"/>
     <fullyQualifiedTypeName name="javafx.scene.shape.StrokeType"/>
@@ -44,8 +41,18 @@
     <fullyQualifiedTypeName name="javafx.scene.text.TextAlignment"/>
     <fullyQualifiedTypeName name="javafx.scene.layout.HBox"/>
     <fullyQualifiedTypeName name="javafx.scene.layout.Priority"/>
-    <fullyQualifiedTypeName name="javafx.scene.Group"/>
     <fullyQualifiedTypeName name="javafx.scene.shape.Polygon"/>
-    <fullyQualifiedTypeName name="javafx.scene.paint.Color"/>
+    <fullyQualifiedTypeName name="javafx.scene.paint.LinearGradient"/>
+    <fullyQualifiedTypeName name="javafx.scene.paint.Stop"/>
+    <fullyQualifiedTypeName name="javafx.scene.paint.CycleMethod"/>
+    <fullyQualifiedTypeName name="javafx.scene.paint.RadialGradient"/>
+    <fullyQualifiedTypeName name="javafx.application.Application"/>
+    <fullyQualifiedTypeName name="javafx.scene.Group"/>
     <fullyQualifiedTypeName name="javafx.scene.Scene"/>
+    <fullyQualifiedTypeName name="javafx.scene.paint.Color"/>
+    <fullyQualifiedTypeName name="javafx.scene.media.Media"/>
+    <fullyQualifiedTypeName name="javafx.scene.media.MediaPlayer"/>
+    <fullyQualifiedTypeName name="javafx.scene.media.MediaView"/>
+    <fullyQualifiedTypeName name="java.awt.Button"/>
+    <fullyQualifiedTypeName name="javafx.scene.control.Button"/>
 </qualifiedTypeNameHistroy>
